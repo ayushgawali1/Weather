@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/" method="POST">
+        <label for="name">name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <% if (locals.bita) { %>
+        <h1><%= content.name %></h1>
+        <p>ID :<%= content.id%></p>
+        <p><%= content.lat %>,<%= content.lon %></p>
+        <p><%= content2.temperature %></p>
+        <p><%= content3[0].station %></p>
+        <p><%= lengths %></p>
+        <p>inside bita(inside if statement)</p>
+    <% }else if (locals.lens) {%>
+        <p>Input was Wrong</p>
+    <% } else { %>
+        <p>Type your INPUT</p>
+    <% } %>
+</body>
+</html>
